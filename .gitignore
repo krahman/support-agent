@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
+state/
+*.db
+*.db-wal
+*.db-shm
+dist/
+.agents
+AGENTS.md
+CLAUDE.md
+openspec/
+docs/REQUIREMENTS.md

@@ -1,0 +1,249 @@
+{
+  "fixture_date": "2026-11-04",
+  "company": "Thread & Harbor",
+  "products": [
+    {
+      "id": "P-TEE",
+      "name": "Cloud Cotton Tee",
+      "description": "100% cotton crew neck; machine wash cold.",
+      "price_cents": 2500,
+      "sale": false,
+      "variants": {
+        "S": 4,
+        "M": 5,
+        "L": 3,
+        "XL": 0
+      }
+    },
+    {
+      "id": "P-HOOD",
+      "name": "Harbor Hoodie",
+      "description": "Brushed cotton blend hoodie.",
+      "price_cents": 4000,
+      "sale": true,
+      "variants": {
+        "S": 2,
+        "M": 3,
+        "L": 4,
+        "XL": 0
+      }
+    },
+    {
+      "id": "P-JEAN",
+      "name": "Trail Jeans",
+      "description": "Straight-leg denim with light stretch.",
+      "price_cents": 6000,
+      "sale": false,
+      "variants": {
+        "30": 3,
+        "32": 4,
+        "34": 0
+      }
+    }
+  ],
+  "customers": [
+    {
+      "id": "C001",
+      "name": "Alex Chen",
+      "email": "alex@example.test"
+    },
+    {
+      "id": "C002",
+      "name": "Sam Rivera",
+      "email": "sam@example.test"
+    },
+    {
+      "id": "G001",
+      "name": "Guest Taylor",
+      "email": "guest@example.test"
+    }
+  ],
+  "orders": [
+    {
+      "id": "O100",
+      "customer_id": "C001",
+      "status": "delivered",
+      "delivered_on": "2026-10-25",
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O100-1-1",
+          "line_id": "O100-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2500,
+          "sale": false,
+          "status": "available"
+        },
+        {
+          "id": "O100-2-1",
+          "line_id": "O100-2",
+          "product_id": "P-HOOD",
+          "variant": "M",
+          "paid_cents": 3200,
+          "sale": true,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O130",
+      "customer_id": "C001",
+      "status": "delivered",
+      "delivered_on": "2026-10-05",
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O130-1-1",
+          "line_id": "O130-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2000,
+          "sale": false,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O131",
+      "customer_id": "C001",
+      "status": "delivered",
+      "delivered_on": "2026-10-04",
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O131-1-1",
+          "line_id": "O131-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2500,
+          "sale": false,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O200",
+      "customer_id": "C002",
+      "status": "delivered",
+      "delivered_on": "2026-10-29",
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O200-1-1",
+          "line_id": "O200-1",
+          "product_id": "P-JEAN",
+          "variant": "32",
+          "paid_cents": 6000,
+          "sale": false,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O300",
+      "customer_id": "G001",
+      "status": "delivered",
+      "delivered_on": "2026-10-28",
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O300-1-1",
+          "line_id": "O300-1",
+          "product_id": "P-HOOD",
+          "variant": "M",
+          "paid_cents": 3200,
+          "sale": true,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O400",
+      "customer_id": "C001",
+      "status": "unshipped",
+      "delivered_on": null,
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O400-1-1",
+          "line_id": "O400-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2000,
+          "sale": false,
+          "status": "available"
+        },
+        {
+          "id": "O400-1-2",
+          "line_id": "O400-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2000,
+          "sale": false,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O401",
+      "customer_id": "C001",
+      "status": "shipped",
+      "delivered_on": null,
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O401-1-1",
+          "line_id": "O401-1",
+          "product_id": "P-JEAN",
+          "variant": "32",
+          "paid_cents": 6000,
+          "sale": false,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "O500",
+      "customer_id": "C001",
+      "status": "delivered",
+      "delivered_on": "2026-10-30",
+      "shipping_cents": 500,
+      "currency": "USD",
+      "units": [
+        {
+          "id": "O500-1-1",
+          "line_id": "O500-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2000,
+          "sale": false,
+          "status": "available"
+        },
+        {
+          "id": "O500-1-2",
+          "line_id": "O500-1",
+          "product_id": "P-TEE",
+          "variant": "M",
+          "paid_cents": 2000,
+          "sale": false,
+          "status": "available"
+        }
+      ]
+    }
+  ],
+  "policies": {
+    "return_days": 30,
+    "sale": "Exchange only unless defective; defective sale items can be refunded.",
+    "currency": "USD",
+    "shipping_refundable": false
+  },
+  "ledger": []
+}

@@ -1,0 +1,1 @@
+"""Fictional apparel support assessment."""

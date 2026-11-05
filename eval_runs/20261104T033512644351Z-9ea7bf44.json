@@ -1,0 +1,223 @@
+{
+  "started_at": "2026-11-04T03:35:12.644843+00:00",
+  "mode": "offline-scripted-and-executor",
+  "model": null,
+  "clock": "2026-11-04",
+  "source_sha256": "e27def3b48ba123ecf457af6c4c85348207046cc9179f8f741d03635d8e894d7",
+  "status": "passed",
+  "cases": [
+    {
+      "id": "tests.test_safety.SafetyTests.test_aggregate_stock",
+      "criteria": "Multi-unit exchange checks total required stock before any decrement.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_ambiguous_target",
+      "criteria": "A clarification proposal has no monetary or stock effect.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_cancellation",
+      "criteria": "Unshipped cancellation refunds 4000 cents once and excludes shipping.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_cancelled_unit_not_refunded",
+      "criteria": "Cancellation then return cannot pay a unit twice.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_concurrent_refunds",
+      "criteria": "Concurrent requests cannot pay the same unit twice.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_cross_customer_order",
+      "criteria": "C001 cannot refund C002's O200; no monetary effect.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_cross_order_unit",
+      "criteria": "A unit from another order cannot be attached to an owned order.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_day_30",
+      "criteria": "Delivery day 30 is eligible at the actual discounted paid value of 2000 cents.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_day_31",
+      "criteria": "Delivery day 31 is denied with no ledger effect.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_delivery_day",
+      "criteria": "Delivery day zero is eligible.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_duplicate_units",
+      "criteria": "Repeating a unit ID in one call cannot double the refund.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_exchange_stock_unavailable",
+      "criteria": "Unavailable replacement leaves stock, units, and ledger unchanged.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_explicit_additional_unit",
+      "criteria": "Explicit remaining unit ID permits a separate additional return.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_fabricated_defect_quote",
+      "criteria": "A model-invented defect quote cannot authorize a sale refund.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_fixture_integrity",
+      "criteria": "Every unit has a unique ID, valid product, positive integer paid value, and known owner.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_future_delivery",
+      "criteria": "A future delivery cannot authorize a refund.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_guest_cli",
+      "criteria": "Guest email CLI uses guest-owned order and executes an eligible sale exchange.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_guest_identity",
+      "criteria": "Guest email resolves case-insensitively and cannot see other customers.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_history_isolation_and_followup",
+      "criteria": "Follow-ups receive their customer's context and never another customer's orders/history.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_instruction_override",
+      "criteria": "Instructions to pretend a defect cannot bypass sale policy.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_invalid_quantities",
+      "criteria": "Negative and excessive quantities cannot be supplied as authority.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_invented_unit",
+      "criteria": "An invented unit ID has no financial effect.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_lookup_failure",
+      "criteria": "Forced lookup failure denies executor mutation and queues one agent escalation.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_malformed_model_response",
+      "criteria": "Malformed JSON or multiple tool calls is rejected without mutation.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_missing_key",
+      "criteria": "Missing model key returns actionable error with no ledger mutation.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_model_failure",
+      "criteria": "Provider errors cannot cause a mutation or expose provider response details.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_model_price_forgery",
+      "criteria": "Extra model fields are rejected before dispatch.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_negative_defect_claim",
+      "criteria": "A negated defect claim is not affirmative evidence.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_no_post_execution_model_call",
+      "criteria": "A committed refund receipt needs no second model call that could fail.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_partial_refund",
+      "criteria": "Returning one of two tees refunds only one discounted unit.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_price_override",
+      "criteria": "Extra amount fields, including negative and excessive values, are rejected.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_regular_refund",
+      "criteria": "Eligible regular tee refunds exactly 2500 cents; shipping is excluded.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_repeat_across_processes",
+      "criteria": "Rephrased refund through separate CLI processes produces one ledger entry.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_rephrased_retry_cannot_consume_other_unit",
+      "criteria": "A model selecting the next identical unit on a vague retry is blocked.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_sale_defect_refund",
+      "criteria": "A verbatim positive defect claim permits a 3200-cent sale refund.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_sale_exchange",
+      "criteria": "Sale exchange reserves stock, consumes the unit, and refunds zero cents.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_sale_refund_denied",
+      "criteria": "Sale hoodie without affirmative defect evidence cannot refund.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_shipped_cancellation",
+      "criteria": "Shipped order cannot cancel.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_truthful_denial",
+      "criteria": "An executor denial replaces a model's false success prose.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_undelivered_return",
+      "criteria": "Unshipped items cannot receive a return refund.",
+      "status": "pass"
+    },
+    {
+      "id": "tests.test_safety.SafetyTests.test_unknown_identity",
+      "criteria": "Unknown identity gets no order details or mutation.",
+      "status": "pass"
+    }
+  ],
+  "active_test": null,
+  "summary": {
+    "tests": 41,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "finished_at": "2026-11-04T03:35:13.848013+00:00"
+}
